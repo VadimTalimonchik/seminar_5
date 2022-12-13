@@ -5,4 +5,26 @@
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
 
-Console.WriteLine("Hello, World!");
+int[] CreateArray()
+{
+    int[] array = new int[123];
+    for(int i = 0; i < 123; i++)
+    {
+        array[i] = new Random().Next(1, 1000);
+        Console.Write($"{array[i]} "); 
+    }
+    Console.WriteLine("\n");
+    return array;
+}
+
+void FindNum(int[] Array)
+{
+int sum = 0;
+for(int i = 0; i <123; i++)
+{
+    if(Array[i] >= 10 && Array[i] <= 99) sum++;
+}
+Console.WriteLine(sum);
+}
+FindNum(CreateArray());
+
